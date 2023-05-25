@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="SporcularBilgiSet" EntityType="Model1.Store.SporcularBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EgitmenlerBilgiSet" EntityType="Model1.Store.EgitmenlerBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalonlarBilgiSet" EntityType="Model1.Store.SalonlarBilgiSet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="SporcularBilgiSet">
+    <Key>
+      <PropertyRef Name="SporcuNo" />
+    </Key>
+    <Property Name="SporcuNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Yas" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Boy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Kilo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EgitmenlerBilgiSet">
+    <Key>
+      <PropertyRef Name="EgitmenNo" />
+    </Key>
+    <Property Name="EgitmenNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalonlarBilgiSet">
+    <Key>
+      <PropertyRef Name="SalonNo" />
+    </Key>
+    <Property Name="SalonNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SalonAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Salonm2" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SporcularBilgiSet" EntityType="Model1.SporcularBilgi" />
+          <EntitySet Name="EgitmenlerBilgiSet" EntityType="Model1.EgitmenlerBilgi" />
+          <EntitySet Name="SalonlarBilgiSet" EntityType="Model1.SalonlarBilgi" />
+        </EntityContainer>
+        <EntityType Name="SporcularBilgi">
+          <Key>
+            <PropertyRef Name="SporcuNo" />
+          </Key>
+          <Property Name="SporcuNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" Nullable="false" />
+          <Property Name="Yas" Type="String" Nullable="false" />
+          <Property Name="Boy" Type="String" Nullable="false" />
+          <Property Name="Kilo" Type="String" Nullable="false" />
+          <Property Name="Adres" Type="String" Nullable="false" />
+          <Property Name="Telefon" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EgitmenlerBilgi">
+          <Key>
+            <PropertyRef Name="EgitmenNo" />
+          </Key>
+          <Property Name="EgitmenNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" Nullable="false" />
+          <Property Name="Adres" Type="String" Nullable="false" />
+          <Property Name="Telefon" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SalonlarBilgi">
+          <Key>
+            <PropertyRef Name="SalonNo" />
+          </Key>
+          <Property Name="SalonNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SalonAdi" Type="String" Nullable="false" />
+          <Property Name="Salonm2" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container1">
+    <EntitySetMapping Name="SporcularBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SporcularBilgi)">
+        <MappingFragment StoreEntitySet="SporcularBilgiSet">
+          <ScalarProperty Name="SporcuNo" ColumnName="SporcuNo" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Yas" ColumnName="Yas" />
+          <ScalarProperty Name="Boy" ColumnName="Boy" />
+          <ScalarProperty Name="Kilo" ColumnName="Kilo" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EgitmenlerBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.EgitmenlerBilgi)">
+        <MappingFragment StoreEntitySet="EgitmenlerBilgiSet">
+          <ScalarProperty Name="EgitmenNo" ColumnName="EgitmenNo" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalonlarBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SalonlarBilgi)">
+        <MappingFragment StoreEntitySet="SalonlarBilgiSet">
+          <ScalarProperty Name="SalonNo" ColumnName="SalonNo" />
+          <ScalarProperty Name="SalonAdi" ColumnName="SalonAdi" />
+          <ScalarProperty Name="Salonm2" ColumnName="Salonm2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

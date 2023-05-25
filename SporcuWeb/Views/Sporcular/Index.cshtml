@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SporcuWeb.Models.SporcularBilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Yeni")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdSoyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Boy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kilo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdSoyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Boy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kilo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Yenile", new { id=item.SporcuNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SporcuNo }) |
+            @Html.ActionLink("Delete", "Sil", new { id=item.SporcuNo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container1">
+    <EntitySetMapping Name="SporcularBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SporcularBilgi)">
+        <MappingFragment StoreEntitySet="SporcularBilgiSet">
+          <ScalarProperty Name="SporcuNo" ColumnName="SporcuNo" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Yas" ColumnName="Yas" />
+          <ScalarProperty Name="Boy" ColumnName="Boy" />
+          <ScalarProperty Name="Kilo" ColumnName="Kilo" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EgitmenlerBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.EgitmenlerBilgi)">
+        <MappingFragment StoreEntitySet="EgitmenlerBilgiSet">
+          <ScalarProperty Name="EgitmenNo" ColumnName="EgitmenNo" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalonlarBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SalonlarBilgi)">
+        <MappingFragment StoreEntitySet="SalonlarBilgiSet">
+          <ScalarProperty Name="SalonNo" ColumnName="SalonNo" />
+          <ScalarProperty Name="SalonAdi" ColumnName="SalonAdi" />
+          <ScalarProperty Name="Salonm2" ColumnName="Salonm2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

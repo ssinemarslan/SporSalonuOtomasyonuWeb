@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SporcularBilgiSet" EntityType="Model1.SporcularBilgi" />
+    <EntitySet Name="EgitmenlerBilgiSet" EntityType="Model1.EgitmenlerBilgi" />
+    <EntitySet Name="SalonlarBilgiSet" EntityType="Model1.SalonlarBilgi" />
+  </EntityContainer>
+  <EntityType Name="SporcularBilgi">
+    <Key>
+      <PropertyRef Name="SporcuNo" />
+    </Key>
+    <Property Name="SporcuNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" Nullable="false" />
+    <Property Name="Yas" Type="String" Nullable="false" />
+    <Property Name="Boy" Type="String" Nullable="false" />
+    <Property Name="Kilo" Type="String" Nullable="false" />
+    <Property Name="Adres" Type="String" Nullable="false" />
+    <Property Name="Telefon" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EgitmenlerBilgi">
+    <Key>
+      <PropertyRef Name="EgitmenNo" />
+    </Key>
+    <Property Name="EgitmenNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" Nullable="false" />
+    <Property Name="Adres" Type="String" Nullable="false" />
+    <Property Name="Telefon" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalonlarBilgi">
+    <Key>
+      <PropertyRef Name="SalonNo" />
+    </Key>
+    <Property Name="SalonNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalonAdi" Type="String" Nullable="false" />
+    <Property Name="Salonm2" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

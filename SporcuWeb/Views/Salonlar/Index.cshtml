@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SporcuWeb.Models.SalonlarBilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Yeni")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SalonAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salonm2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalonAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salonm2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SalonNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SalonNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SalonNo })
+        </td>
+    </tr>
+}
+
+</table>
